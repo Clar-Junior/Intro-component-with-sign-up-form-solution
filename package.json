@@ -1,0 +1,18 @@
+{
+	"dependencies": {
+		"@tailwindcss/cli": "^4.1.5",
+		"tailwindcss": "^4.1.5"
+	},
+	"name": "intro-component-with-signup-form-master",
+	"version": "1.0.0",
+	"description": "![Design preview for the Intro component with sign up form coding challenge](./design/desktop-preview.jpg)",
+	"main": "index.js",
+	"devDependencies": {},
+	"scripts": {
+		"dev": "npx @tailwindcss/cli -i ./style.css -o ./dist/output.css --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs"
+}

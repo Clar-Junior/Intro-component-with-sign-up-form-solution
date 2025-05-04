@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@theme {
+	--footer-font: hsl(228, 45%, 44%);
+	/* ## Colors */
+	/* ### Primary */
+	--Red: hsl(0, 100%, 74%);
+	--Green: hsl(154, 59%, 51%);
+
+	/* ### Accent */
+	--Blue: hsl(248, 32%, 49%);
+
+	/* ### Neutral */
+	--Dark-Blue: hsl(249, 10%, 26%);
+	--Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+input {
+	@apply ring-1 ring-gray-200 rounded-xs px-4 py-3 font-bold text-[0.85rem] tracking-wide placeholder:text-zinc-500;
+}
+
+.box {
+	@apply shadow-[0_7px_1px_0_hsl(0,32%,49%,40%)];
+}
+.green-box {
+	@apply shadow-[0_4px_1px_0_hsl(154,79%,31%,70%)];
+}
