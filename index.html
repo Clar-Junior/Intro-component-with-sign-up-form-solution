@@ -12,44 +12,51 @@
 
 </head>
 
-<body class="font-[Poppins] bg-(--Red) bg-[url(/images/bg-intro-mobile.png)]  bg-top bg-cover">
+<body
+  class="bg-(--Red) max-md:bg-[url(/images/bg-intro-mobile.png)] min-md:bg-[url(/images/bg-intro-desktop.png)] max-md:bg-top bg-no-repeat bg-size-[1420px_882px]">
+  <div class="font-[Poppins] flex max-md:flex-col min-md:flex-row min-md:w-full min-md:h-[100vh] min-md:justify-center">
 
-  <div class="mt-23 flex flex-col gap-18 px-6">
-    <div class="flex flex-col gap-7">
-      <p class="text-[1.5rem] text-center font-bold text-white leading-8 tracking-wider">Learn to code by watching
-        others
-      </p>
+    <div
+      class="max-md:mt-23 flex flex-col gap-18 max-md:px-6 min-md:pl-2 min-md:pr-12 min-md:justify-center min-md:w-[40%]">
+      <div class="flex flex-col gap-7">
+        <p
+          class="max-md:text-[1.5rem] min-md:text-[3rem] text-center min-md:text-left font-bold text-white leading-8 min-md:leading-12 tracking-wide">
+          Learn to code by watching others
+        </p>
 
-      <p class="text-[1rem] text-center text-white/80 leading-6">
-        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-        but understanding how developers think is invaluable.
-      </p>
+        <p class="text-[1rem] text-center min-md:text-left text-white/80 leading-6">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.
+        </p>
+      </div>
     </div>
 
-    <button class="box bg-(--Blue) py-5 px-10 shadow-lg rounded-lg text-[0.95rem] leading-6 tracking-wider">
-      <span class="text-white font-[600]">Try it free 7 days</span>
-      <span class=" text-white/80">then $20/mo. thereafter</span>
-    </button>
-  </div>
 
-  <!-- input card -->
-  <div class="px-6 mt-7">
-    <div class="box bg-white px-5 py-5 flex flex-col gap-4 rounded-lg">
-      <input type="text" name="firstName" id="inFirstName" placeholder="First Name">
-      <input type="text" name="lastName" id="inLastName" placeholder="Last Name">
-      <input type="email" name="mail" id="inMail" placeholder="Email Address">
-      <input type="password" name="password" id="inPassword" placeholder=" Password">
+    <!-- input card -->
+    <div class="max-md:px-6 max-md:mt-18 min-md:flex min-md:flex-col min-md:justify-center min-md:w-[40%]">
       <button
-        class="green-box w-full text-[1rem] bg-(--Green) text-white rounded-lg py-3 px-6 inset-shadow-emerald-700">CLAIM
-        YOUR FREE
-        TRIAL</button>
-      <p class="px-4 text-[0.70rem] text-(--Grayish-Blue) text-center leading-4">
-        By clicking the button, you are agreeing to our
-        <span class="text-(--Red) font-bold">Terms and Services</span>
-      </p>
+        class="w-full box bg-(--Blue) max-md:py-5 min-md:py-4 px-10 shadow-lg rounded-lg text-[0.95rem] leading-6 tracking-wider">
+        <span class="text-white font-[600]">Try it free 7 days</span>
+        <span class=" text-white/80">then $20/mo. thereafter</span>
+      </button>
+      <div
+        class="mt-7 box bg-white max-md:py-5 max-md:px-5 min-md:py-11 min-md:px-8 flex flex-col max-md:gap-4 min-md:gap-6 rounded-lg">
+        <input type="text" name="firstName" id="inFirstName" placeholder="First Name">
+        <input type="text" name="lastName" id="inLastName" placeholder="Last Name">
+        <input type="email" name="mail" id="inMail" placeholder="Email Address">
+        <input type="password" name="password" id="inPassword" placeholder=" Password">
+        <button
+          class="green-box w-full text-[1rem] bg-(--Green) text-white rounded-lg max-md:py-3 min-md:py-4 px-6 inset-shadow-emerald-700">CLAIM
+          YOUR FREE
+          TRIAL</button>
+        <p class="px-4 text-[0.70rem] text-(--Grayish-Blue) text-center leading-4">
+          By clicking the button, you are agreeing to our
+          <span class="text-(--Red) font-bold">Terms and Services</span>
+        </p>
+      </div>
     </div>
-  </div>
 
+  </div>
   <footer>
     <div class="py-5">
       <p class="text-[11px] text-center">
@@ -57,8 +64,8 @@
           class="text-(--footer-font)">Frontend Mentor</a>.
         Coded by <a href="#" class="text-(--footer-font)">C.Junior</a>.
       </p>
+    </div>
   </footer>
-  </div>
 </body>
 
 </style>

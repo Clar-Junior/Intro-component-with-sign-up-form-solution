@@ -10,6 +10,7 @@
     --color-emerald-700: oklch(50.8% 0.118 165.612);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-zinc-500: oklch(55.2% 0.016 285.938);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-bold: 700;
@@ -172,17 +173,8 @@
   }
 }
 @layer utilities {
-  .static {
-    position: static;
-  }
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
-  }
-  .mt-23 {
-    margin-top: calc(var(--spacing) * 23);
-  }
-  .contents {
-    display: contents;
   }
   .flex {
     display: flex;
@@ -201,9 +193,6 @@
   }
   .flex-col {
     flex-direction: column;
-  }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
   }
   .gap-7 {
     gap: calc(var(--spacing) * 7);
@@ -230,32 +219,20 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\/images\/bg-intro-mobile\.png\)\] {
-    background-image: url(/images/bg-intro-mobile.png);
+  .bg-size-\[1420px_882px\] {
+    background-size: 1420px 882px;
   }
-  .bg-cover {
-    background-size: cover;
-  }
-  .bg-top {
-    background-position: top;
+  .bg-no-repeat {
+    background-repeat: no-repeat;
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
-  .px-5 {
-    padding-inline: calc(var(--spacing) * 5);
-  }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
-  .px-9 {
-    padding-inline: calc(var(--spacing) * 9);
-  }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
-  }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
@@ -271,12 +248,6 @@
   }
   .text-\[0\.95rem\] {
     font-size: 0.95rem;
-  }
-  .text-\[0\.97rem\] {
-    font-size: 0.97rem;
-  }
-  .text-\[1\.5rem\] {
-    font-size: 1.5rem;
   }
   .text-\[1rem\] {
     font-size: 1rem;
@@ -303,6 +274,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
   }
   .tracking-wider {
     --tw-tracking: var(--tracking-wider);
@@ -343,12 +318,156 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .max-md\:mt-18 {
+    @media (width < 48rem) {
+      margin-top: calc(var(--spacing) * 18);
+    }
+  }
+  .max-md\:mt-23 {
+    @media (width < 48rem) {
+      margin-top: calc(var(--spacing) * 23);
+    }
+  }
+  .max-md\:flex-col {
+    @media (width < 48rem) {
+      flex-direction: column;
+    }
+  }
+  .max-md\:gap-4 {
+    @media (width < 48rem) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
+  .max-md\:bg-\[url\(\/images\/bg-intro-mobile\.png\)\] {
+    @media (width < 48rem) {
+      background-image: url(/images/bg-intro-mobile.png);
+    }
+  }
+  .max-md\:bg-top {
+    @media (width < 48rem) {
+      background-position: top;
+    }
+  }
+  .max-md\:px-5 {
+    @media (width < 48rem) {
+      padding-inline: calc(var(--spacing) * 5);
+    }
+  }
+  .max-md\:px-6 {
+    @media (width < 48rem) {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .max-md\:py-3 {
+    @media (width < 48rem) {
+      padding-block: calc(var(--spacing) * 3);
+    }
+  }
+  .max-md\:py-5 {
+    @media (width < 48rem) {
+      padding-block: calc(var(--spacing) * 5);
+    }
+  }
+  .max-md\:text-\[1\.5rem\] {
+    @media (width < 48rem) {
+      font-size: 1.5rem;
+    }
+  }
+  .min-md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .min-md\:h-\[100vh\] {
+    @media (width >= 48rem) {
+      height: 100vh;
+    }
+  }
+  .min-md\:w-\[40\%\] {
+    @media (width >= 48rem) {
+      width: 40%;
+    }
+  }
+  .min-md\:w-full {
+    @media (width >= 48rem) {
+      width: 100%;
+    }
+  }
+  .min-md\:flex-col {
+    @media (width >= 48rem) {
+      flex-direction: column;
+    }
+  }
+  .min-md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .min-md\:justify-center {
+    @media (width >= 48rem) {
+      justify-content: center;
+    }
+  }
+  .min-md\:gap-6 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 6);
+    }
+  }
+  .min-md\:bg-\[url\(\/images\/bg-intro-desktop\.png\)\] {
+    @media (width >= 48rem) {
+      background-image: url(/images/bg-intro-desktop.png);
+    }
+  }
+  .min-md\:px-8 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .min-md\:py-4 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 4);
+    }
+  }
+  .min-md\:py-10 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .min-md\:py-11 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 11);
+    }
+  }
+  .min-md\:pr-12 {
+    @media (width >= 48rem) {
+      padding-right: calc(var(--spacing) * 12);
+    }
+  }
+  .min-md\:pl-2 {
+    @media (width >= 48rem) {
+      padding-left: calc(var(--spacing) * 2);
+    }
+  }
+  .min-md\:text-left {
+    @media (width >= 48rem) {
+      text-align: left;
+    }
+  }
+  .min-md\:text-\[3rem\] {
+    @media (width >= 48rem) {
+      font-size: 3rem;
+    }
+  }
+  .min-md\:leading-12 {
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 12);
+      line-height: calc(var(--spacing) * 12);
+    }
+  }
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 input {
   border-radius: var(--radius-xs);
-  padding-inline: calc(var(--spacing) * 4);
-  padding-block: calc(var(--spacing) * 3);
   font-size: 0.85rem;
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
@@ -357,8 +476,25 @@ input {
   --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   --tw-ring-color: var(--color-gray-200);
+  outline-color: var(--color-black);
   &::placeholder {
     color: var(--color-zinc-500);
+  }
+  &:focus {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  @media (width < 48rem) {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  @media (width < 48rem) {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  @media (width >= 48rem) {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  @media (width >= 48rem) {
+    padding-block: calc(var(--spacing) * 5);
   }
 }
 .box {

@@ -17,7 +17,7 @@
 }
 
 input {
-	@apply ring-1 ring-gray-200 rounded-xs px-4 py-3 font-bold text-[0.85rem] tracking-wide placeholder:text-zinc-500;
+	@apply ring-1 ring-gray-200 rounded-xs max-md:px-4 min-md:px-8 max-md:py-3 min-md:py-5 font-bold text-[0.85rem] tracking-wide placeholder:text-zinc-500 focus:outline-1 outline-black;
 }
 
 .box {
