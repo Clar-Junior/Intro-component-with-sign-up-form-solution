@@ -17,7 +17,7 @@
 }
 
 input {
-	@apply ring-1 ring-gray-200 rounded-xs max-md:px-4 min-md:px-8 max-md:py-3 min-md:py-5 font-bold text-[0.85rem] tracking-wide placeholder:text-zinc-500 focus:outline-1 outline-black;
+	@apply ring-1 ring-gray-200 rounded-xs max-md:px-4 min-md:px-8 max-md:py-3 min-md:py-5 font-bold text-[0.85rem] tracking-wide  focus:outline-1 w-full;
 }
 
 .box {
@@ -25,4 +25,8 @@ input {
 }
 .green-box {
 	@apply shadow-[0_4px_1px_0_hsl(154,79%,31%,70%)];
+}
+.box,
+.green-box {
+	@apply hover:cursor-pointer outline-0;
 }

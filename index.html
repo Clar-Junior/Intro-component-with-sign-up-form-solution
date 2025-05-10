@@ -13,18 +13,19 @@
 </head>
 
 <body
-  class="bg-(--Red) max-md:bg-[url(/images/bg-intro-mobile.png)] min-md:bg-[url(/images/bg-intro-desktop.png)] max-md:bg-top bg-no-repeat bg-size-[1420px_882px]">
+  class="bg-(--Red) max-md:bg-[url(/images/bg-intro-mobile.png)] min-md:bg-[url(/images/bg-intro-desktop.png)] max-md:bg-top bg-no-repeat bg-size-[1890px_990px]">
   <div class="font-[Poppins] flex max-md:flex-col min-md:flex-row min-md:w-full min-md:h-[100vh] min-md:justify-center">
 
     <div
       class="max-md:mt-23 flex flex-col gap-18 max-md:px-6 min-md:pl-2 min-md:pr-12 min-md:justify-center min-md:w-[40%]">
-      <div class="flex flex-col gap-7">
+      <div class="flex flex-col gap-7 min-md:w-[95%] min-md:self-start min-md:gap-8 min-md:pt-2 min-md:ps-1">
         <p
-          class="max-md:text-[1.5rem] min-md:text-[3rem] text-center min-md:text-left font-bold text-white leading-8 min-md:leading-12 tracking-wide">
+          class="max-md:text-[1.5rem] min-md:text-[4rem] text-center min-md:text-left font-bold text-white leading-8 min-md:leading-16 tracking-wide">
           Learn to code by watching others
         </p>
 
-        <p class="text-[1rem] text-center min-md:text-left text-white/80 leading-6">
+        <p
+          class="text-[1rem] min-md:text-[1.35rem] text-center min-md:text-left text-white/80 leading-6 min-md:leading-8 min-md:pt-2">
           See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
           but understanding how developers think is invaluable.
         </p>
@@ -33,23 +34,42 @@
 
 
     <!-- input card -->
-    <div class="max-md:px-6 max-md:mt-18 min-md:flex min-md:flex-col min-md:justify-center min-md:w-[40%]">
+    <div class="max-md:px-6 max-md:mt-18 min-md:flex min-md:flex-col min-md:justify-center min-md:w-[40%] min-md:ps-6">
       <button
-        class="w-full box bg-(--Blue) max-md:py-5 min-md:py-4 px-10 shadow-lg rounded-lg text-[0.95rem] leading-6 tracking-wider">
+        class="w-full box bg-(--Blue) max-md:py-5 min-md:py-6 px-10 shadow-lg rounded-lg text-[0.95rem] min-md:text-[1rem] leading-6 tracking-wider min-md:w-[97.5%] min-md:">
         <span class="text-white font-[600]">Try it free 7 days</span>
         <span class=" text-white/80">then $20/mo. thereafter</span>
       </button>
       <div
-        class="mt-7 box bg-white max-md:py-5 max-md:px-5 min-md:py-11 min-md:px-8 flex flex-col max-md:gap-4 min-md:gap-6 rounded-lg">
-        <input type="text" name="firstName" id="inFirstName" placeholder="First Name">
-        <input type="text" name="lastName" id="inLastName" placeholder="Last Name">
-        <input type="email" name="mail" id="inMail" placeholder="Email Address">
-        <input type="password" name="password" id="inPassword" placeholder=" Password">
-        <button
-          class="green-box w-full text-[1rem] bg-(--Green) text-white rounded-lg max-md:py-3 min-md:py-4 px-6 inset-shadow-emerald-700">CLAIM
-          YOUR FREE
-          TRIAL</button>
-        <p class="px-4 text-[0.70rem] text-(--Grayish-Blue) text-center leading-4">
+        class="mt-7 box bg-white max-md:py-5 max-md:px-5 min-md:py-11 min-md:px-12 flex flex-col max-md:gap-4 min-md:gap-6 rounded-lg min-md:h-max-[72%] min-md:w-[97.5%]">
+
+        <div>
+          <input type="text" name="firstName" id="inFirstName" placeholder="First Name"
+            class="placeholder:text-zinc-500">
+          <div id="fNameAlert"></div>
+        </div>
+
+        <div>
+          <input type="text" name="lastName" id="inLastName" placeholder="Last Name" class="placeholder:text-zinc-500">
+          <div id="lNameAlert"></div>
+        </div>
+
+        <div>
+          <input type="email" name="mail" id="inMail" placeholder="Email Address" class="placeholder:text-zinc-500">
+          <div id="emailAlert"></div>
+        </div>
+
+        <div>
+          <input type="password" name="password" id="inPassword" placeholder=" Password"
+            class="placeholder:text-zinc-500">
+          <div id="passwordAlert"></div>
+        </div>
+
+        <button id="btnSubmit"
+          class="green-box w-full text-[1rem] bg-(--Green) text-white rounded-lg max-md:py-3 min-md:py-4 px-6 inset-shadow-emerald-700">
+          CLAIM YOUR FREE TRIAL
+        </button>
+        <p class="px-4 text-[0.80rem] text-(--Grayish-Blue) text-center leading-4 min-md:tracking-wider">
           By clicking the button, you are agreeing to our
           <span class="text-(--Red) font-bold">Terms and Services</span>
         </p>
@@ -66,6 +86,8 @@
       </p>
     </div>
   </footer>
+
+  <script src="./main.js" type="text/javascript"></script>
 </body>
 
 </style>

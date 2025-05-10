@@ -7,10 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-emerald-700: oklch(50.8% 0.118 165.612);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-zinc-500: oklch(55.2% 0.016 285.938);
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-bold: 700;
@@ -179,17 +179,8 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -203,9 +194,12 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
-  .border {
+  .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-red-500 {
+    border-color: var(--color-red-500);
   }
   .bg-\(--Blue\) {
     background-color: var(--Blue);
@@ -219,8 +213,14 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-size-\[1420px_882px\] {
-    background-size: 1420px 882px;
+  .bg-\[url\(\/images\/icon-error\.svg\)\] {
+    background-image: url(/images/icon-error.svg);
+  }
+  .bg-size-\[1890px_990px\] {
+    background-size: 1890px 990px;
+  }
+  .bg-position-\[center_right_1\.5rem\] {
+    background-position: center right 1.5rem;
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
@@ -234,17 +234,26 @@
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
   .text-center {
     text-align: center;
   }
+  .text-end {
+    text-align: end;
+  }
   .font-\[Poppins\] {
     font-family: Poppins;
   }
-  .text-\[0\.70rem\] {
-    font-size: 0.70rem;
+  .text-\[0\.8rem\] {
+    font-size: 0.8rem;
+  }
+  .text-\[0\.80rem\] {
+    font-size: 0.80rem;
   }
   .text-\[0\.95rem\] {
     font-size: 0.95rem;
@@ -292,6 +301,9 @@
   .text-\(--footer-font\) {
     color: var(--footer-font);
   }
+  .text-red-500 {
+    color: var(--color-red-500);
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -301,8 +313,8 @@
       color: color-mix(in oklab, var(--color-white) 80%, transparent);
     }
   }
-  .underline {
-    text-decoration-line: underline;
+  .italic {
+    font-style: italic;
   }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -314,9 +326,15 @@
       --tw-inset-shadow-color: color-mix(in oklab, var(--color-emerald-700) var(--tw-inset-shadow-alpha), transparent);
     }
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .placeholder\:text-red-500 {
+    &::placeholder {
+      color: var(--color-red-500);
+    }
+  }
+  .placeholder\:text-zinc-500 {
+    &::placeholder {
+      color: var(--color-zinc-500);
+    }
   }
   .max-md\:mt-18 {
     @media (width < 48rem) {
@@ -388,6 +406,16 @@
       width: 40%;
     }
   }
+  .min-md\:w-\[95\%\] {
+    @media (width >= 48rem) {
+      width: 95%;
+    }
+  }
+  .min-md\:w-\[97\.5\%\] {
+    @media (width >= 48rem) {
+      width: 97.5%;
+    }
+  }
   .min-md\:w-full {
     @media (width >= 48rem) {
       width: 100%;
@@ -413,14 +441,24 @@
       gap: calc(var(--spacing) * 6);
     }
   }
+  .min-md\:gap-8 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 8);
+    }
+  }
+  .min-md\:self-start {
+    @media (width >= 48rem) {
+      align-self: flex-start;
+    }
+  }
   .min-md\:bg-\[url\(\/images\/bg-intro-desktop\.png\)\] {
     @media (width >= 48rem) {
       background-image: url(/images/bg-intro-desktop.png);
     }
   }
-  .min-md\:px-8 {
+  .min-md\:px-12 {
     @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 8);
+      padding-inline: calc(var(--spacing) * 12);
     }
   }
   .min-md\:py-4 {
@@ -428,14 +466,29 @@
       padding-block: calc(var(--spacing) * 4);
     }
   }
-  .min-md\:py-10 {
+  .min-md\:py-6 {
     @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 10);
+      padding-block: calc(var(--spacing) * 6);
     }
   }
   .min-md\:py-11 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 11);
+    }
+  }
+  .min-md\:ps-1 {
+    @media (width >= 48rem) {
+      padding-inline-start: calc(var(--spacing) * 1);
+    }
+  }
+  .min-md\:ps-6 {
+    @media (width >= 48rem) {
+      padding-inline-start: calc(var(--spacing) * 6);
+    }
+  }
+  .min-md\:pt-2 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 2);
     }
   }
   .min-md\:pr-12 {
@@ -453,20 +506,43 @@
       text-align: left;
     }
   }
-  .min-md\:text-\[3rem\] {
+  .min-md\:text-\[1\.35rem\] {
     @media (width >= 48rem) {
-      font-size: 3rem;
+      font-size: 1.35rem;
     }
   }
-  .min-md\:leading-12 {
+  .min-md\:text-\[1rem\] {
     @media (width >= 48rem) {
-      --tw-leading: calc(var(--spacing) * 12);
-      line-height: calc(var(--spacing) * 12);
+      font-size: 1rem;
+    }
+  }
+  .min-md\:text-\[4rem\] {
+    @media (width >= 48rem) {
+      font-size: 4rem;
+    }
+  }
+  .min-md\:leading-8 {
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 8);
+      line-height: calc(var(--spacing) * 8);
+    }
+  }
+  .min-md\:leading-16 {
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 16);
+      line-height: calc(var(--spacing) * 16);
+    }
+  }
+  .min-md\:tracking-wider {
+    @media (width >= 48rem) {
+      --tw-tracking: var(--tracking-wider);
+      letter-spacing: var(--tracking-wider);
     }
   }
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 input {
+  width: 100%;
   border-radius: var(--radius-xs);
   font-size: 0.85rem;
   --tw-font-weight: var(--font-weight-bold);
@@ -476,10 +552,6 @@ input {
   --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   --tw-ring-color: var(--color-gray-200);
-  outline-color: var(--color-black);
-  &::placeholder {
-    color: var(--color-zinc-500);
-  }
   &:focus {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -504,6 +576,15 @@ input {
 .green-box {
   --tw-shadow: 0 4px 1px 0 var(--tw-shadow-color, hsl(154,79%,31%,70%));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.box, .green-box {
+  outline-style: var(--tw-outline-style);
+  outline-width: 0px;
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
 }
 @property --tw-border-style {
   syntax: "*";
