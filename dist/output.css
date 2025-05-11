@@ -229,11 +229,8 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\.\/images\/icon-error\.svg\)\] {
-    background-image: url(./images/icon-error.svg);
-  }
-  .bg-\[url\(\/images\/icon-error\.svg\)\] {
-    background-image: url(/images/icon-error.svg);
+  .bg-\[url\(\.\.\/images\/icon-error\.svg\)\] {
+    background-image: url(../images/icon-error.svg);
   }
   .bg-position-\[center_right_1\.5rem\] {
     background-position: center right 1.5rem;
@@ -382,6 +379,11 @@
       gap: calc(var(--spacing) * 4);
     }
   }
+  .max-md\:bg-\[url\(\.\.\/images\/bg-intro-mobile\.png\)\] {
+    @media (width < 48rem) {
+      background-image: url(../images/bg-intro-mobile.png);
+    }
+  }
   .max-md\:bg-\[url\(\.\/images\/bg-intro-mobile\.png\)\] {
     @media (width < 48rem) {
       background-image: url(./images/bg-intro-mobile.png);
@@ -470,6 +472,11 @@
   .min-md\:self-start {
     @media (width >= 48rem) {
       align-self: flex-start;
+    }
+  }
+  .min-md\:bg-\[url\(\.\.\/images\/bg-intro-desktop\.png\)\] {
+    @media (width >= 48rem) {
+      background-image: url(../images/bg-intro-desktop.png);
     }
   }
   .min-md\:bg-\[url\(\.\/images\/bg-intro-desktop\.png\)\] {
