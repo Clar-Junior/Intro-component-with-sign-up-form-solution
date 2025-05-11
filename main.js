@@ -18,7 +18,7 @@ btnSubmit.addEventListener('click', () => {
             paragrafo.textContent = "First Name cannot be empty"
             fName.textContent = ""
             fName.placeholder = ""
-            fName.classList.add('border-red-500', 'border-1', 'bg-[url(/images/icon-error.svg)]', 'bg-no-repeat', 'bg-position-[center_right_1.5rem]')
+            fName.classList.add('border-red-500', 'border-1', 'bg-[url(./images/icon-error.svg)]', 'bg-no-repeat', 'bg-position-[center_right_1.5rem]')
             fNameAlert.append(paragrafo)
         }
     }
@@ -30,7 +30,7 @@ btnSubmit.addEventListener('click', () => {
             paragrafo.textContent = "Last Name cannot be empty"
             lName.textContent = ""
             lName.placeholder = ""
-            lName.classList.add('border-red-500', 'border-1', 'bg-[url(/images/icon-error.svg)]', 'bg-no-repeat', 'bg-position-[center_right_1.5rem]')
+            lName.classList.add('border-red-500', 'border-1', 'bg-[url(./images/icon-error.svg)]', 'bg-no-repeat', 'bg-position-[center_right_1.5rem]')
             lNameAlert.append(paragrafo)
         }
     }
@@ -55,7 +55,7 @@ btnSubmit.addEventListener('click', () => {
             paragrafo.textContent = "Password cannot be empty"
             inPassword.textContent = ""
             inPassword.placeholder = ""
-            inPassword.classList.add('border-red-500', 'border-1', 'bg-[url(/images/icon-error.svg)]', 'bg-no-repeat', 'bg-position-[center_right_1.5rem]')
+            inPassword.classList.add('border-red-500', 'border-1', 'bg-[url(./images/icon-error.svg)]', 'bg-no-repeat', 'bg-position-[center_right_1.5rem]')
             passwordAlert.append(paragrafo)
         }
     }
